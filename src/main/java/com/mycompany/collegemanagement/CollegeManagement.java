@@ -244,12 +244,13 @@ public class CollegeManagement extends javax.swing.JFrame implements ActionListe
             AdminBtn.setSelected(false);
             StudentBtn.setSelected(false);
         }else if(e.getSource() == LoginBtn){
+            
             if(AdminBtn.isSelected()){
-                USER_TYPE = AdminBtn.getText();
+                USER_TYPE = AdminBtn.getText().toUpperCase();
             }else if(StudentBtn.isSelected()){
-                USER_TYPE = StudentBtn.getText();
+                USER_TYPE = StudentBtn.getText().toUpperCase();
             }else if(FacultyBtn.isSelected()){
-                USER_TYPE = FacultyBtn.getText();
+                USER_TYPE = FacultyBtn.getText().toUpperCase();
             }
             
             userId = UserId.getText();

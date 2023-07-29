@@ -51,6 +51,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
 //        //</editor-fold>
 
     
+    scrlHeader.setText("     "+USER_TYPE);
     
     
     rightPane = (CardLayout) RightPanelMain.getLayout();
@@ -91,7 +92,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         jSplitPane1 = new javax.swing.JSplitPane();
         ScrSideNavPane = new javax.swing.JScrollPane();
         SideNavPane = new javax.swing.JPanel();
-        scrlAdminHeader = new javax.swing.JLabel();
+        scrlHeader = new javax.swing.JLabel();
         DashboardItem = new javax.swing.JLabel();
         CoursesItem = new javax.swing.JLabel();
         ProgressReportItem = new javax.swing.JLabel();
@@ -168,11 +169,11 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         SideNavPane.setBackground(new java.awt.Color(0, 28, 48));
         SideNavPane.setPreferredSize(new java.awt.Dimension(287, 780));
 
-        scrlAdminHeader.setFont(new java.awt.Font("Dubai Light", 0, 12)); // NOI18N
-        scrlAdminHeader.setForeground(new java.awt.Color(255, 255, 255));
-        scrlAdminHeader.setText("     ADMIN");
-        scrlAdminHeader.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(218, 255, 251)));
-        scrlAdminHeader.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        scrlHeader.setFont(new java.awt.Font("Dubai Light", 0, 12)); // NOI18N
+        scrlHeader.setForeground(new java.awt.Color(255, 255, 255));
+        scrlHeader.setText("     ADMIN");
+        scrlHeader.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(218, 255, 251)));
+        scrlHeader.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         DashboardItem.setBackground(new java.awt.Color(112, 255, 134));
         DashboardItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
@@ -276,7 +277,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         SideNavPane.setLayout(SideNavPaneLayout);
         SideNavPaneLayout.setHorizontalGroup(
             SideNavPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrlAdminHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(scrlHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(DashboardItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(CoursesItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
             .addComponent(ProgressReportItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
@@ -295,7 +296,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         SideNavPaneLayout.setVerticalGroup(
             SideNavPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SideNavPaneLayout.createSequentialGroup()
-                .addComponent(scrlAdminHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(scrlHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DashboardItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -863,7 +864,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JLabel scrlAdminHeader;
+    private javax.swing.JLabel scrlHeader;
     // End of variables declaration//GEN-END:variables
 
     @Override
