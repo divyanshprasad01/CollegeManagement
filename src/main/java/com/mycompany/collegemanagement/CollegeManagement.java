@@ -3,9 +3,11 @@ package com.mycompany.collegemanagement;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 
-public class CollegeManagement extends javax.swing.JFrame implements ActionListener{
+public class CollegeManagement extends javax.swing.JFrame implements ActionListener, MouseListener{
     
     String userId;
     String password;
@@ -22,6 +24,10 @@ public class CollegeManagement extends javax.swing.JFrame implements ActionListe
         AdminBtn.addActionListener(this);
         StudentBtn.addActionListener(this);
         FacultyBtn.addActionListener(this);
+        
+        UserId.addMouseListener(this);
+        Password.addMouseListener(this);
+        
     }
 
     /**
@@ -266,6 +272,36 @@ public class CollegeManagement extends javax.swing.JFrame implements ActionListe
         
         
         
+        
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if(e.getSource() == UserId && UserId.getText().equals("  USER ID")){
+            UserId.setText("  ");
+        }
+        if(e.getSource() == Password && Password.getText().equals("  PASSWORD")){
+            Password.setText("  ");
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+       
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
         
     }
 }
