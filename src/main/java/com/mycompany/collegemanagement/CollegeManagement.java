@@ -247,16 +247,20 @@ public class CollegeManagement extends javax.swing.JFrame implements ActionListe
             
             if(AdminBtn.isSelected()){
                 USER_TYPE = AdminBtn.getText().toUpperCase();
+                new AdminPortal(userId, password, USER_TYPE).setVisible(true);
             }else if(StudentBtn.isSelected()){
                 USER_TYPE = StudentBtn.getText().toUpperCase();
+                new StudentPortal(userId,password,USER_TYPE).setVisible(true);
             }else if(FacultyBtn.isSelected()){
                 USER_TYPE = FacultyBtn.getText().toUpperCase();
+                new FacultyPortal(userId, password, USER_TYPE).setVisible(true);
             }
             
             userId = UserId.getText();
             password = Password.getText();
             
-            new DashBoard(userId,password,USER_TYPE).setVisible(true);
+            
+            
             this.dispose();
         }
         

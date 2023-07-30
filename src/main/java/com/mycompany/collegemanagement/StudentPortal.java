@@ -1,4 +1,3 @@
-
 package com.mycompany.collegemanagement;
 
 import java.awt.CardLayout;
@@ -11,24 +10,23 @@ import javax.swing.JLabel;
  *
  * @author Divyansh Prasad
  */
-public class DashBoard extends javax.swing.JFrame implements MouseListener{
+public class StudentPortal extends javax.swing.JFrame implements MouseListener {
 
-    String USER_ID,PASSWORD,USER_TYPE;
-    
+    String USER_ID, PASSWORD, USER_TYPE;
+
     JLabel selectedItem;
-    
+
     CardLayout rightPane;
-    
-    
-    public DashBoard(String USER_ID, String PASSWORD, String USER_TYPE) {
+
+    public StudentPortal(String USER_ID, String PASSWORD, String USER_TYPE) {
         this.USER_ID = USER_ID;
         this.PASSWORD = PASSWORD;
         this.USER_TYPE = USER_TYPE;
-        
+
         initComponents();
-        
+
         new CollegeDatabase();
-        
+
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
 //        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -42,143 +40,38 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(DashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(StudentPortal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(DashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(StudentPortal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(DashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(StudentPortal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(DashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(StudentPortal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
+        scrlHeader.setText("     " + USER_TYPE);
 
-    
-    scrlHeader.setText("     "+USER_TYPE);
-    
-    
-    rightPane = (CardLayout) RightPanelMain.getLayout();
-    rightPane.show(RightPanelMain, "DashBoardPaneStr");
-    
+        rightPane = (CardLayout) RightPanelMain.getLayout();
+        rightPane.show(RightPanelMain, "DashBoardPaneStr");
 
-    selectedItem = item1;
-    
-    
-    if(USER_TYPE.equals("ADMIN")){
-        item1.setText("     DASHBOARD");
+        selectedItem = item1;
+
+        
         item1.addMouseListener(this);
-        
-        item2.setText("     AUTHENTICATION DATABASE");
         item2.addMouseListener(this);
-        
-        item3.setText("     STUDENT DATABASE");
         item3.addMouseListener(this);
-        
-        item4.setText("     MARKSHEET DATABASE");
         item4.addMouseListener(this);
- 
-        item5.setText("     COURSES DATABASE");
         item5.addMouseListener(this);
-        
-        item6.setText("     FACULTY DATABASE");
         item6.addMouseListener(this);
-        
-        item7.setText("");
-        item8.setText("");
-        item9.setText("");
-        item10.setText("");
-        item11.setText("");
-        item12.setText("");
-        item13.setText("");
-        item14.setText("");
-        
-    }else if(USER_TYPE.equals("FACULTY")){
-        
-        item1.setText("     DASHBOARD");
-        item1.addMouseListener(this);
-        
-        item2.setText("     TIME TABLE");
-        item2.addMouseListener(this);
-        
-        item3.setText("     STUDY MATERIAL UPLOAD");
-        item3.addMouseListener(this);
-        
-        item4.setText("     CHAT WITH STUDENTS");
-        item4.addMouseListener(this);
- 
-        item5.setText("     MAKE AN ANNOUNCEMENT");
-        item5.addMouseListener(this);
-        
-        item6.setText("     REPORT A PROBLEM");
-        item6.addMouseListener(this);
-        
-        item7.setText("     APPLY FOR LEAVE");
         item7.addMouseListener(this);
-        
-        item8.setText("     PAYMENT RELATED QUARIES");
         item8.addMouseListener(this);
-
-        
-        item9.setText("     REQUEST A RESOURCE");
         item9.addMouseListener(this);
-        
-        item10.setText("     MEETINGS");
         item10.addMouseListener(this);
-
-
-        
-        item11.setText("");
-        item12.setText("");
-        item13.setText("");
-        item14.setText("");
-        
-    }else{
-        
-        item1.setText("     DASHBOARD");
-        item1.addMouseListener(this);
-        
-        item2.setText("     COURSES");
-        item2.addMouseListener(this);
-        
-        item3.setText("     PROGRESS REPORT");
-        item3.addMouseListener(this);
-        
-        item4.setText("     FACULTIES");
-        item4.addMouseListener(this);
- 
-        item5.setText("     TIME TABLE");
-        item5.addMouseListener(this);
-        
-        item6.setText("     GRIEVANCE");
-        item6.addMouseListener(this);
-        
-        item7.setText("     FINANCE PORTAL");
-        item7.addMouseListener(this);
-        
-        item8.setText("     NOTICES");
-        item8.addMouseListener(this);
-
-        
-        item9.setText("     ONGOING EVENTS");
-        item9.addMouseListener(this);
-        
-        item10.setText("     DISCUSSION HUB");
-        item10.addMouseListener(this);
-        
-        item11.setText("     STUDENTS HELP TEAM");
         item11.addMouseListener(this);
-        
-        item12.setText("     COURSE REGISTRATION");
         item12.addMouseListener(this);
-        
-        item13.setText("     CERTIFICATIONS");
         item13.addMouseListener(this);
-        
-        item14.setText("     ABOUT US");
         item14.addMouseListener(this);
-    }
 
-
-    
     }
 
     /**
@@ -254,7 +147,6 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1050, 715));
 
         jPanel1.setBackground(new java.awt.Color(0, 28, 48));
 
@@ -441,13 +333,13 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
 
         DashBoardPane.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setText("Dashboard");
+        jLabel1.setText("Admin Dashboard");
 
         javax.swing.GroupLayout DashBoardPaneLayout = new javax.swing.GroupLayout(DashBoardPane);
         DashBoardPane.setLayout(DashBoardPaneLayout);
         DashBoardPaneLayout.setHorizontalGroup(
             DashBoardPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(DashBoardPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DashBoardPaneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -456,7 +348,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         DashBoardPaneLayout.setVerticalGroup(
             DashBoardPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(DashBoardPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DashBoardPaneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -478,7 +370,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane.setLayout(CoursesPaneLayout);
         CoursesPaneLayout.setHorizontalGroup(
             CoursesPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPaneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -487,7 +379,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPaneLayout.setVerticalGroup(
             CoursesPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPaneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -509,7 +401,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane1.setLayout(CoursesPane1Layout);
         CoursesPane1Layout.setHorizontalGroup(
             CoursesPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -518,7 +410,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane1Layout.setVerticalGroup(
             CoursesPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -540,7 +432,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane2.setLayout(CoursesPane2Layout);
         CoursesPane2Layout.setHorizontalGroup(
             CoursesPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane2Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -549,7 +441,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane2Layout.setVerticalGroup(
             CoursesPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane2Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -571,7 +463,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane3.setLayout(CoursesPane3Layout);
         CoursesPane3Layout.setHorizontalGroup(
             CoursesPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane3Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -580,7 +472,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane3Layout.setVerticalGroup(
             CoursesPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane3Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -602,7 +494,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane4.setLayout(CoursesPane4Layout);
         CoursesPane4Layout.setHorizontalGroup(
             CoursesPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane4Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -611,7 +503,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane4Layout.setVerticalGroup(
             CoursesPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane4Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -633,7 +525,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane5.setLayout(CoursesPane5Layout);
         CoursesPane5Layout.setHorizontalGroup(
             CoursesPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane5Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -642,7 +534,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane5Layout.setVerticalGroup(
             CoursesPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane5Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -664,7 +556,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane6.setLayout(CoursesPane6Layout);
         CoursesPane6Layout.setHorizontalGroup(
             CoursesPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane6Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -673,7 +565,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane6Layout.setVerticalGroup(
             CoursesPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane6Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -695,7 +587,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane7.setLayout(CoursesPane7Layout);
         CoursesPane7Layout.setHorizontalGroup(
             CoursesPane7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane7Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -704,7 +596,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane7Layout.setVerticalGroup(
             CoursesPane7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane7Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -728,7 +620,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane8.setLayout(CoursesPane8Layout);
         CoursesPane8Layout.setHorizontalGroup(
             CoursesPane8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane8Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -737,7 +629,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane8Layout.setVerticalGroup(
             CoursesPane8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane8Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -760,7 +652,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane9.setLayout(CoursesPane9Layout);
         CoursesPane9Layout.setHorizontalGroup(
             CoursesPane9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane9Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -769,7 +661,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane9Layout.setVerticalGroup(
             CoursesPane9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane9Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -792,7 +684,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane10.setLayout(CoursesPane10Layout);
         CoursesPane10Layout.setHorizontalGroup(
             CoursesPane10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane10Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -801,7 +693,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane10Layout.setVerticalGroup(
             CoursesPane10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane10Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -824,7 +716,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane11.setLayout(CoursesPane11Layout);
         CoursesPane11Layout.setHorizontalGroup(
             CoursesPane11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane11Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -833,7 +725,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane11Layout.setVerticalGroup(
             CoursesPane11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane11Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -856,7 +748,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         CoursesPane12.setLayout(CoursesPane12Layout);
         CoursesPane12Layout.setHorizontalGroup(
             CoursesPane12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
+            .addGap(0, 763, Short.MAX_VALUE)
             .addGroup(CoursesPane12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane12Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -865,7 +757,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         CoursesPane12Layout.setVerticalGroup(
             CoursesPane12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 597, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
             .addGroup(CoursesPane12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CoursesPane12Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -887,7 +779,7 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -971,131 +863,130 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        
+
         selectedItem.setBackground(new Color(0x001C30));
         selectedItem = (JLabel) e.getSource();
-        
-        
-         if(e.getSource() == item1){
+
+        if (e.getSource() == item1) {
             item1.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "DashBoardStr");
-        }else if(e.getSource() == item2){
+        } else if (e.getSource() == item2) {
             item2.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "CoursesStr");
-        }else if(e.getSource() == item3){
+        } else if (e.getSource() == item3) {
             item3.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "ProgRepStr");
-        }else if(e.getSource() == item4){
+        } else if (e.getSource() == item4) {
             item4.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "FacultiesStr");
-        }else if(e.getSource() == item5){
+        } else if (e.getSource() == item5) {
             item5.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "TimeTableStr");
-        }else if(e.getSource() == item6){
+        } else if (e.getSource() == item6) {
             item6.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "GrievanceStr");
-        }else if(e.getSource() == item7){
+        } else if (e.getSource() == item7) {
             item7.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "FinancePortalStr");
-        }else if(e.getSource() == item8){
+        } else if (e.getSource() == item8) {
             item8.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "NoticesStr");
-        }else if(e.getSource() == item9){
+        } else if (e.getSource() == item9) {
             item9.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "OngoingEventsStr");
-        }else if(e.getSource() == item10){
+        } else if (e.getSource() == item10) {
             item10.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "DiscussionHubStr");
-        }else if(e.getSource() == item11){
-           item11.setBackground(new Color(0x70FF86));
-           rightPane.show(RightPanelMain, "StudentHelpTeamStr");
-        }else if(e.getSource() == item12){
+        } else if (e.getSource() == item11) {
+            item11.setBackground(new Color(0x70FF86));
+            rightPane.show(RightPanelMain, "StudentHelpTeamStr");
+        } else if (e.getSource() == item12) {
             item12.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "CourseSemRegStr");
-        }else if(e.getSource() == item14){
+        } else if (e.getSource() == item14) {
             item14.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "AboutUsStr");
-        }else if(e.getSource() == item13){
+        } else if (e.getSource() == item13) {
             item13.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "CertificatesStr");
-        } 
-        
+        }
+
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        
+
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        
+
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        if(e.getSource() == item1){
+        if (e.getSource() == item1) {
             item1.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item2){
+        } else if (e.getSource() == item2) {
             item2.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item3){
+        } else if (e.getSource() == item3) {
             item3.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item4){
+        } else if (e.getSource() == item4) {
             item4.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item5){
+        } else if (e.getSource() == item5) {
             item5.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item6){
+        } else if (e.getSource() == item6) {
             item6.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item7){
+        } else if (e.getSource() == item7) {
             item7.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item8){
+        } else if (e.getSource() == item8) {
             item8.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item9){
+        } else if (e.getSource() == item9) {
             item9.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item10){
+        } else if (e.getSource() == item10) {
             item10.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item11){
-           item11.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item12){
+        } else if (e.getSource() == item11) {
+            item11.setBackground(new Color(0x70FF86));
+        } else if (e.getSource() == item12) {
             item12.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item14){
+        } else if (e.getSource() == item14) {
             item14.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == item13){
+        } else if (e.getSource() == item13) {
             item13.setBackground(new Color(0x70FF86));
-        } 
-    
+        }
+
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        if(e.getSource() == item1 && e.getSource() != selectedItem){
+        if (e.getSource() == item1 && e.getSource() != selectedItem) {
             item1.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item2 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item2 && e.getSource() != selectedItem) {
             item2.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item3 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item3 && e.getSource() != selectedItem) {
             item3.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item4 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item4 && e.getSource() != selectedItem) {
             item4.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item5 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item5 && e.getSource() != selectedItem) {
             item5.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item6 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item6 && e.getSource() != selectedItem) {
             item6.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item7 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item7 && e.getSource() != selectedItem) {
             item7.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item8 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item8 && e.getSource() != selectedItem) {
             item8.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item9 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item9 && e.getSource() != selectedItem) {
             item9.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item10 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item10 && e.getSource() != selectedItem) {
             item10.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item11 && e.getSource() != selectedItem){
-           item11.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item12 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item11 && e.getSource() != selectedItem) {
+            item11.setBackground(new Color(0x001C30));
+        } else if (e.getSource() == item12 && e.getSource() != selectedItem) {
             item12.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item14 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item14 && e.getSource() != selectedItem) {
             item14.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == item13 && e.getSource() != selectedItem){
+        } else if (e.getSource() == item13 && e.getSource() != selectedItem) {
             item13.setBackground(new Color(0x001C30));
-        } 
+        }
     }
 }
