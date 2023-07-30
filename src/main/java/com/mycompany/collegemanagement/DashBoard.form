@@ -103,20 +103,20 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="scrlHeader" alignment="0" max="32767" attributes="0"/>
-                          <Component id="DashboardItem" alignment="1" max="32767" attributes="0"/>
-                          <Component id="CoursesItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="ProgressReportItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="FacultiesItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="TimeTableItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="GrievanceItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="FinancePortalItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="NoticesItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="OngoingEventsItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="DiscussionHubItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="StudentHelpTeamItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="CourseSemRegItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="CertificatesItem" alignment="1" pref="287" max="32767" attributes="0"/>
-                          <Component id="AboutUsItem" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="item2" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item3" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item4" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item5" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item6" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item7" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item8" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item9" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item10" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item11" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item12" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item13" alignment="1" pref="287" max="32767" attributes="0"/>
+                          <Component id="item14" alignment="1" pref="287" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
@@ -124,33 +124,33 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="scrlHeader" min="-2" pref="93" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="DashboardItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item1" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="CoursesItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item2" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="ProgressReportItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item3" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="FacultiesItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item4" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="TimeTableItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item5" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="GrievanceItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item6" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="FinancePortalItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item7" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="NoticesItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item8" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="OngoingEventsItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item9" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="DiscussionHubItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item10" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="StudentHelpTeamItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item11" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="CourseSemRegItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item12" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="CertificatesItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item13" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="AboutUsItem" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="item14" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -176,7 +176,7 @@
                         <Property name="horizontalTextPosition" type="int" value="0"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="DashboardItem">
+                    <Component class="javax.swing.JLabel" name="item1">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="86" green="ff" red="70" type="rgb"/>
@@ -192,7 +192,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="CoursesItem">
+                    <Component class="javax.swing.JLabel" name="item2">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -208,7 +208,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="ProgressReportItem">
+                    <Component class="javax.swing.JLabel" name="item3">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -224,7 +224,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="FacultiesItem">
+                    <Component class="javax.swing.JLabel" name="item4">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -240,7 +240,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="TimeTableItem">
+                    <Component class="javax.swing.JLabel" name="item5">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -256,7 +256,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="GrievanceItem">
+                    <Component class="javax.swing.JLabel" name="item6">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -272,7 +272,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="FinancePortalItem">
+                    <Component class="javax.swing.JLabel" name="item7">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -288,7 +288,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="NoticesItem">
+                    <Component class="javax.swing.JLabel" name="item8">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -304,7 +304,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="OngoingEventsItem">
+                    <Component class="javax.swing.JLabel" name="item9">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -320,7 +320,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="DiscussionHubItem">
+                    <Component class="javax.swing.JLabel" name="item10">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -336,7 +336,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="StudentHelpTeamItem">
+                    <Component class="javax.swing.JLabel" name="item11">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -352,7 +352,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="CourseSemRegItem">
+                    <Component class="javax.swing.JLabel" name="item12">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -368,7 +368,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="CertificatesItem">
+                    <Component class="javax.swing.JLabel" name="item13">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>
@@ -384,7 +384,7 @@
                         <Property name="opaque" type="boolean" value="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="AboutUsItem">
+                    <Component class="javax.swing.JLabel" name="item14">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="30" green="1c" red="0" type="rgb"/>

@@ -27,6 +27,8 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         
         initComponents();
         
+        new CollegeDatabase();
+        
 //        /* Set the Nimbus look and feel */
 //        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
 //        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -58,25 +60,125 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
     rightPane.show(RightPanelMain, "DashBoardPaneStr");
     
 
-    selectedItem = DashboardItem;
-
-
-    DashboardItem.addMouseListener(this);
-    CoursesItem.addMouseListener(this);
-    ProgressReportItem.addMouseListener(this);
-    FacultiesItem.addMouseListener(this);
-    TimeTableItem.addMouseListener(this);
-    GrievanceItem.addMouseListener(this);
-    FinancePortalItem.addMouseListener(this);
-    NoticesItem.addMouseListener(this);
-    OngoingEventsItem.addMouseListener(this);
-    DiscussionHubItem.addMouseListener(this);
-    StudentHelpTeamItem.addMouseListener(this);
-    CourseSemRegItem.addMouseListener(this);
-    AboutUsItem.addMouseListener(this);
-    CertificatesItem.addMouseListener(this);
+    selectedItem = item1;
     
+    
+    if(USER_TYPE.equals("ADMIN")){
+        item1.setText("     DASHBOARD");
+        item1.addMouseListener(this);
+        
+        item2.setText("     AUTHENTICATION DATABASE");
+        item2.addMouseListener(this);
+        
+        item3.setText("     STUDENT DATABASE");
+        item3.addMouseListener(this);
+        
+        item4.setText("     MARKSHEET DATABASE");
+        item4.addMouseListener(this);
+ 
+        item5.setText("     COURSES DATABASE");
+        item5.addMouseListener(this);
+        
+        item6.setText("     FACULTY DATABASE");
+        item6.addMouseListener(this);
+        
+        item7.setText("");
+        item8.setText("");
+        item9.setText("");
+        item10.setText("");
+        item11.setText("");
+        item12.setText("");
+        item13.setText("");
+        item14.setText("");
+        
+    }else if(USER_TYPE.equals("FACULTY")){
+        
+        item1.setText("     DASHBOARD");
+        item1.addMouseListener(this);
+        
+        item2.setText("     TIME TABLE");
+        item2.addMouseListener(this);
+        
+        item3.setText("     STUDY MATERIAL UPLOAD");
+        item3.addMouseListener(this);
+        
+        item4.setText("     CHAT WITH STUDENTS");
+        item4.addMouseListener(this);
+ 
+        item5.setText("     MAKE AN ANNOUNCEMENT");
+        item5.addMouseListener(this);
+        
+        item6.setText("     REPORT A PROBLEM");
+        item6.addMouseListener(this);
+        
+        item7.setText("     APPLY FOR LEAVE");
+        item7.addMouseListener(this);
+        
+        item8.setText("     PAYMENT RELATED QUARIES");
+        item8.addMouseListener(this);
 
+        
+        item9.setText("     REQUEST A RESOURCE");
+        item9.addMouseListener(this);
+        
+        item10.setText("     MEETINGS");
+        item10.addMouseListener(this);
+
+
+        
+        item11.setText("");
+        item12.setText("");
+        item13.setText("");
+        item14.setText("");
+        
+    }else{
+        
+        item1.setText("     DASHBOARD");
+        item1.addMouseListener(this);
+        
+        item2.setText("     COURSES");
+        item2.addMouseListener(this);
+        
+        item3.setText("     PROGRESS REPORT");
+        item3.addMouseListener(this);
+        
+        item4.setText("     FACULTIES");
+        item4.addMouseListener(this);
+ 
+        item5.setText("     TIME TABLE");
+        item5.addMouseListener(this);
+        
+        item6.setText("     GRIEVANCE");
+        item6.addMouseListener(this);
+        
+        item7.setText("     FINANCE PORTAL");
+        item7.addMouseListener(this);
+        
+        item8.setText("     NOTICES");
+        item8.addMouseListener(this);
+
+        
+        item9.setText("     ONGOING EVENTS");
+        item9.addMouseListener(this);
+        
+        item10.setText("     DISCUSSION HUB");
+        item10.addMouseListener(this);
+        
+        item11.setText("     STUDENTS HELP TEAM");
+        item11.addMouseListener(this);
+        
+        item12.setText("     COURSE REGISTRATION");
+        item12.addMouseListener(this);
+        
+        item13.setText("     CERTIFICATIONS");
+        item13.addMouseListener(this);
+        
+        item14.setText("     ABOUT US");
+        item14.addMouseListener(this);
+    }
+
+
+    
     }
 
     /**
@@ -93,20 +195,20 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         ScrSideNavPane = new javax.swing.JScrollPane();
         SideNavPane = new javax.swing.JPanel();
         scrlHeader = new javax.swing.JLabel();
-        DashboardItem = new javax.swing.JLabel();
-        CoursesItem = new javax.swing.JLabel();
-        ProgressReportItem = new javax.swing.JLabel();
-        FacultiesItem = new javax.swing.JLabel();
-        TimeTableItem = new javax.swing.JLabel();
-        GrievanceItem = new javax.swing.JLabel();
-        FinancePortalItem = new javax.swing.JLabel();
-        NoticesItem = new javax.swing.JLabel();
-        OngoingEventsItem = new javax.swing.JLabel();
-        DiscussionHubItem = new javax.swing.JLabel();
-        StudentHelpTeamItem = new javax.swing.JLabel();
-        CourseSemRegItem = new javax.swing.JLabel();
-        CertificatesItem = new javax.swing.JLabel();
-        AboutUsItem = new javax.swing.JLabel();
+        item1 = new javax.swing.JLabel();
+        item2 = new javax.swing.JLabel();
+        item3 = new javax.swing.JLabel();
+        item4 = new javax.swing.JLabel();
+        item5 = new javax.swing.JLabel();
+        item6 = new javax.swing.JLabel();
+        item7 = new javax.swing.JLabel();
+        item8 = new javax.swing.JLabel();
+        item9 = new javax.swing.JLabel();
+        item10 = new javax.swing.JLabel();
+        item11 = new javax.swing.JLabel();
+        item12 = new javax.swing.JLabel();
+        item13 = new javax.swing.JLabel();
+        item14 = new javax.swing.JLabel();
         RightPanelMain = new javax.swing.JPanel();
         ScrDashBoardPane = new javax.swing.JScrollPane();
         DashBoardPane = new javax.swing.JPanel();
@@ -175,156 +277,156 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         scrlHeader.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(218, 255, 251)));
         scrlHeader.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        DashboardItem.setBackground(new java.awt.Color(112, 255, 134));
-        DashboardItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        DashboardItem.setForeground(new java.awt.Color(255, 255, 255));
-        DashboardItem.setText("     DASHBOARD");
-        DashboardItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        DashboardItem.setOpaque(true);
+        item1.setBackground(new java.awt.Color(112, 255, 134));
+        item1.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item1.setForeground(new java.awt.Color(255, 255, 255));
+        item1.setText("     DASHBOARD");
+        item1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item1.setOpaque(true);
 
-        CoursesItem.setBackground(new java.awt.Color(0, 28, 48));
-        CoursesItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        CoursesItem.setForeground(new java.awt.Color(255, 255, 255));
-        CoursesItem.setText("     COURSES");
-        CoursesItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        CoursesItem.setOpaque(true);
+        item2.setBackground(new java.awt.Color(0, 28, 48));
+        item2.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item2.setForeground(new java.awt.Color(255, 255, 255));
+        item2.setText("     COURSES");
+        item2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item2.setOpaque(true);
 
-        ProgressReportItem.setBackground(new java.awt.Color(0, 28, 48));
-        ProgressReportItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        ProgressReportItem.setForeground(new java.awt.Color(255, 255, 255));
-        ProgressReportItem.setText("     PROGRESS REPORT");
-        ProgressReportItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        ProgressReportItem.setOpaque(true);
+        item3.setBackground(new java.awt.Color(0, 28, 48));
+        item3.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item3.setForeground(new java.awt.Color(255, 255, 255));
+        item3.setText("     PROGRESS REPORT");
+        item3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item3.setOpaque(true);
 
-        FacultiesItem.setBackground(new java.awt.Color(0, 28, 48));
-        FacultiesItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        FacultiesItem.setForeground(new java.awt.Color(255, 255, 255));
-        FacultiesItem.setText("     FACULTIES");
-        FacultiesItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        FacultiesItem.setOpaque(true);
+        item4.setBackground(new java.awt.Color(0, 28, 48));
+        item4.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item4.setForeground(new java.awt.Color(255, 255, 255));
+        item4.setText("     FACULTIES");
+        item4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item4.setOpaque(true);
 
-        TimeTableItem.setBackground(new java.awt.Color(0, 28, 48));
-        TimeTableItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        TimeTableItem.setForeground(new java.awt.Color(255, 255, 255));
-        TimeTableItem.setText("     TIME TABLE");
-        TimeTableItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        TimeTableItem.setOpaque(true);
+        item5.setBackground(new java.awt.Color(0, 28, 48));
+        item5.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item5.setForeground(new java.awt.Color(255, 255, 255));
+        item5.setText("     TIME TABLE");
+        item5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item5.setOpaque(true);
 
-        GrievanceItem.setBackground(new java.awt.Color(0, 28, 48));
-        GrievanceItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        GrievanceItem.setForeground(new java.awt.Color(255, 255, 255));
-        GrievanceItem.setText("     GRIEVANCE");
-        GrievanceItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        GrievanceItem.setOpaque(true);
+        item6.setBackground(new java.awt.Color(0, 28, 48));
+        item6.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item6.setForeground(new java.awt.Color(255, 255, 255));
+        item6.setText("     GRIEVANCE");
+        item6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item6.setOpaque(true);
 
-        FinancePortalItem.setBackground(new java.awt.Color(0, 28, 48));
-        FinancePortalItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        FinancePortalItem.setForeground(new java.awt.Color(255, 255, 255));
-        FinancePortalItem.setText("     FINANCE PORTAL");
-        FinancePortalItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        FinancePortalItem.setOpaque(true);
+        item7.setBackground(new java.awt.Color(0, 28, 48));
+        item7.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item7.setForeground(new java.awt.Color(255, 255, 255));
+        item7.setText("     FINANCE PORTAL");
+        item7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item7.setOpaque(true);
 
-        NoticesItem.setBackground(new java.awt.Color(0, 28, 48));
-        NoticesItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        NoticesItem.setForeground(new java.awt.Color(255, 255, 255));
-        NoticesItem.setText("     NOTICES");
-        NoticesItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        NoticesItem.setOpaque(true);
+        item8.setBackground(new java.awt.Color(0, 28, 48));
+        item8.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item8.setForeground(new java.awt.Color(255, 255, 255));
+        item8.setText("     NOTICES");
+        item8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item8.setOpaque(true);
 
-        OngoingEventsItem.setBackground(new java.awt.Color(0, 28, 48));
-        OngoingEventsItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        OngoingEventsItem.setForeground(new java.awt.Color(255, 255, 255));
-        OngoingEventsItem.setText("     ONGOING EVENTS");
-        OngoingEventsItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        OngoingEventsItem.setOpaque(true);
+        item9.setBackground(new java.awt.Color(0, 28, 48));
+        item9.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item9.setForeground(new java.awt.Color(255, 255, 255));
+        item9.setText("     ONGOING EVENTS");
+        item9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item9.setOpaque(true);
 
-        DiscussionHubItem.setBackground(new java.awt.Color(0, 28, 48));
-        DiscussionHubItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        DiscussionHubItem.setForeground(new java.awt.Color(255, 255, 255));
-        DiscussionHubItem.setText("     DISCUSSION HUB");
-        DiscussionHubItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        DiscussionHubItem.setOpaque(true);
+        item10.setBackground(new java.awt.Color(0, 28, 48));
+        item10.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item10.setForeground(new java.awt.Color(255, 255, 255));
+        item10.setText("     DISCUSSION HUB");
+        item10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item10.setOpaque(true);
 
-        StudentHelpTeamItem.setBackground(new java.awt.Color(0, 28, 48));
-        StudentHelpTeamItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        StudentHelpTeamItem.setForeground(new java.awt.Color(255, 255, 255));
-        StudentHelpTeamItem.setText("     STUDENT HELP TEAM");
-        StudentHelpTeamItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        StudentHelpTeamItem.setOpaque(true);
+        item11.setBackground(new java.awt.Color(0, 28, 48));
+        item11.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item11.setForeground(new java.awt.Color(255, 255, 255));
+        item11.setText("     STUDENT HELP TEAM");
+        item11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item11.setOpaque(true);
 
-        CourseSemRegItem.setBackground(new java.awt.Color(0, 28, 48));
-        CourseSemRegItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        CourseSemRegItem.setForeground(new java.awt.Color(255, 255, 255));
-        CourseSemRegItem.setText("     COURSE & SEMESTER REGISTRATION");
-        CourseSemRegItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        CourseSemRegItem.setOpaque(true);
+        item12.setBackground(new java.awt.Color(0, 28, 48));
+        item12.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item12.setForeground(new java.awt.Color(255, 255, 255));
+        item12.setText("     COURSE & SEMESTER REGISTRATION");
+        item12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item12.setOpaque(true);
 
-        CertificatesItem.setBackground(new java.awt.Color(0, 28, 48));
-        CertificatesItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        CertificatesItem.setForeground(new java.awt.Color(255, 255, 255));
-        CertificatesItem.setText("     CERTIFICATES");
-        CertificatesItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        CertificatesItem.setOpaque(true);
+        item13.setBackground(new java.awt.Color(0, 28, 48));
+        item13.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item13.setForeground(new java.awt.Color(255, 255, 255));
+        item13.setText("     CERTIFICATES");
+        item13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item13.setOpaque(true);
 
-        AboutUsItem.setBackground(new java.awt.Color(0, 28, 48));
-        AboutUsItem.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        AboutUsItem.setForeground(new java.awt.Color(255, 255, 255));
-        AboutUsItem.setText("     ABOUT OUR UNIVERSITY");
-        AboutUsItem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        AboutUsItem.setOpaque(true);
+        item14.setBackground(new java.awt.Color(0, 28, 48));
+        item14.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        item14.setForeground(new java.awt.Color(255, 255, 255));
+        item14.setText("     ABOUT OUR UNIVERSITY");
+        item14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        item14.setOpaque(true);
 
         javax.swing.GroupLayout SideNavPaneLayout = new javax.swing.GroupLayout(SideNavPane);
         SideNavPane.setLayout(SideNavPaneLayout);
         SideNavPaneLayout.setHorizontalGroup(
             SideNavPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(scrlHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(DashboardItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(CoursesItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(ProgressReportItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(FacultiesItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(TimeTableItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(GrievanceItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(FinancePortalItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(NoticesItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(OngoingEventsItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(DiscussionHubItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(StudentHelpTeamItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(CourseSemRegItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(CertificatesItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-            .addComponent(AboutUsItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(item2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(item14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
         );
         SideNavPaneLayout.setVerticalGroup(
             SideNavPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SideNavPaneLayout.createSequentialGroup()
                 .addComponent(scrlHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DashboardItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CoursesItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ProgressReportItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FacultiesItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TimeTableItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(GrievanceItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FinancePortalItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(NoticesItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item8, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OngoingEventsItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item9, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DiscussionHubItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item10, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(StudentHelpTeamItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item11, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CourseSemRegItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item12, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CertificatesItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item13, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(AboutUsItem, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(item14, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -803,10 +905,6 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AboutUsItem;
-    private javax.swing.JLabel CertificatesItem;
-    private javax.swing.JLabel CourseSemRegItem;
-    private javax.swing.JLabel CoursesItem;
     private javax.swing.JPanel CoursesPane;
     private javax.swing.JPanel CoursesPane1;
     private javax.swing.JPanel CoursesPane10;
@@ -821,14 +919,6 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
     private javax.swing.JPanel CoursesPane8;
     private javax.swing.JPanel CoursesPane9;
     private javax.swing.JPanel DashBoardPane;
-    private javax.swing.JLabel DashboardItem;
-    private javax.swing.JLabel DiscussionHubItem;
-    private javax.swing.JLabel FacultiesItem;
-    private javax.swing.JLabel FinancePortalItem;
-    private javax.swing.JLabel GrievanceItem;
-    private javax.swing.JLabel NoticesItem;
-    private javax.swing.JLabel OngoingEventsItem;
-    private javax.swing.JLabel ProgressReportItem;
     private javax.swing.JPanel RightPanelMain;
     private javax.swing.JScrollPane ScrAboutUsPane;
     private javax.swing.JScrollPane ScrCertificatesPane;
@@ -846,8 +936,20 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
     private javax.swing.JScrollPane ScrStudentHelpTeamPane;
     private javax.swing.JScrollPane ScrTimeTablePane;
     private javax.swing.JPanel SideNavPane;
-    private javax.swing.JLabel StudentHelpTeamItem;
-    private javax.swing.JLabel TimeTableItem;
+    private javax.swing.JLabel item1;
+    private javax.swing.JLabel item10;
+    private javax.swing.JLabel item11;
+    private javax.swing.JLabel item12;
+    private javax.swing.JLabel item13;
+    private javax.swing.JLabel item14;
+    private javax.swing.JLabel item2;
+    private javax.swing.JLabel item3;
+    private javax.swing.JLabel item4;
+    private javax.swing.JLabel item5;
+    private javax.swing.JLabel item6;
+    private javax.swing.JLabel item7;
+    private javax.swing.JLabel item8;
+    private javax.swing.JLabel item9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -874,47 +976,47 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
         selectedItem = (JLabel) e.getSource();
         
         
-         if(e.getSource() == DashboardItem){
-            DashboardItem.setBackground(new Color(0x70FF86));
+         if(e.getSource() == item1){
+            item1.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "DashBoardStr");
-        }else if(e.getSource() == CoursesItem){
-            CoursesItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item2){
+            item2.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "CoursesStr");
-        }else if(e.getSource() == ProgressReportItem){
-            ProgressReportItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item3){
+            item3.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "ProgRepStr");
-        }else if(e.getSource() == FacultiesItem){
-            FacultiesItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item4){
+            item4.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "FacultiesStr");
-        }else if(e.getSource() == TimeTableItem){
-            TimeTableItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item5){
+            item5.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "TimeTableStr");
-        }else if(e.getSource() == GrievanceItem){
-            GrievanceItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item6){
+            item6.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "GrievanceStr");
-        }else if(e.getSource() == FinancePortalItem){
-            FinancePortalItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item7){
+            item7.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "FinancePortalStr");
-        }else if(e.getSource() == NoticesItem){
-            NoticesItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item8){
+            item8.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "NoticesStr");
-        }else if(e.getSource() == OngoingEventsItem){
-            OngoingEventsItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item9){
+            item9.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "OngoingEventsStr");
-        }else if(e.getSource() == DiscussionHubItem){
-            DiscussionHubItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item10){
+            item10.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "DiscussionHubStr");
-        }else if(e.getSource() == StudentHelpTeamItem){
-           StudentHelpTeamItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item11){
+           item11.setBackground(new Color(0x70FF86));
            rightPane.show(RightPanelMain, "StudentHelpTeamStr");
-        }else if(e.getSource() == CourseSemRegItem){
-            CourseSemRegItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item12){
+            item12.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "CourseSemRegStr");
-        }else if(e.getSource() == AboutUsItem){
-            AboutUsItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item14){
+            item14.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "AboutUsStr");
-        }else if(e.getSource() == CertificatesItem){
-            CertificatesItem.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item13){
+            item13.setBackground(new Color(0x70FF86));
             rightPane.show(RightPanelMain, "CertificatesStr");
         } 
         
@@ -932,68 +1034,68 @@ public class DashBoard extends javax.swing.JFrame implements MouseListener{
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        if(e.getSource() == DashboardItem){
-            DashboardItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == CoursesItem){
-            CoursesItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == ProgressReportItem){
-            ProgressReportItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == FacultiesItem){
-            FacultiesItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == TimeTableItem){
-            TimeTableItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == GrievanceItem){
-            GrievanceItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == FinancePortalItem){
-            FinancePortalItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == NoticesItem){
-            NoticesItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == OngoingEventsItem){
-            OngoingEventsItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == DiscussionHubItem){
-            DiscussionHubItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == StudentHelpTeamItem){
-           StudentHelpTeamItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == CourseSemRegItem){
-            CourseSemRegItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == AboutUsItem){
-            AboutUsItem.setBackground(new Color(0x70FF86));
-        }else if(e.getSource() == CertificatesItem){
-            CertificatesItem.setBackground(new Color(0x70FF86));
+        if(e.getSource() == item1){
+            item1.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item2){
+            item2.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item3){
+            item3.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item4){
+            item4.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item5){
+            item5.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item6){
+            item6.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item7){
+            item7.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item8){
+            item8.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item9){
+            item9.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item10){
+            item10.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item11){
+           item11.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item12){
+            item12.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item14){
+            item14.setBackground(new Color(0x70FF86));
+        }else if(e.getSource() == item13){
+            item13.setBackground(new Color(0x70FF86));
         } 
     
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        if(e.getSource() == DashboardItem && e.getSource() != selectedItem){
-            DashboardItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == CoursesItem && e.getSource() != selectedItem){
-            CoursesItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == ProgressReportItem && e.getSource() != selectedItem){
-            ProgressReportItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == FacultiesItem && e.getSource() != selectedItem){
-            FacultiesItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == TimeTableItem && e.getSource() != selectedItem){
-            TimeTableItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == GrievanceItem && e.getSource() != selectedItem){
-            GrievanceItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == FinancePortalItem && e.getSource() != selectedItem){
-            FinancePortalItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == NoticesItem && e.getSource() != selectedItem){
-            NoticesItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == OngoingEventsItem && e.getSource() != selectedItem){
-            OngoingEventsItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == DiscussionHubItem && e.getSource() != selectedItem){
-            DiscussionHubItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == StudentHelpTeamItem && e.getSource() != selectedItem){
-           StudentHelpTeamItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == CourseSemRegItem && e.getSource() != selectedItem){
-            CourseSemRegItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == AboutUsItem && e.getSource() != selectedItem){
-            AboutUsItem.setBackground(new Color(0x001C30));
-        }else if(e.getSource() == CertificatesItem && e.getSource() != selectedItem){
-            CertificatesItem.setBackground(new Color(0x001C30));
+        if(e.getSource() == item1 && e.getSource() != selectedItem){
+            item1.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item2 && e.getSource() != selectedItem){
+            item2.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item3 && e.getSource() != selectedItem){
+            item3.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item4 && e.getSource() != selectedItem){
+            item4.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item5 && e.getSource() != selectedItem){
+            item5.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item6 && e.getSource() != selectedItem){
+            item6.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item7 && e.getSource() != selectedItem){
+            item7.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item8 && e.getSource() != selectedItem){
+            item8.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item9 && e.getSource() != selectedItem){
+            item9.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item10 && e.getSource() != selectedItem){
+            item10.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item11 && e.getSource() != selectedItem){
+           item11.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item12 && e.getSource() != selectedItem){
+            item12.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item14 && e.getSource() != selectedItem){
+            item14.setBackground(new Color(0x001C30));
+        }else if(e.getSource() == item13 && e.getSource() != selectedItem){
+            item13.setBackground(new Color(0x001C30));
         } 
     }
 }
