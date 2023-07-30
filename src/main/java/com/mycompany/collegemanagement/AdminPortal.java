@@ -49,7 +49,7 @@ public class AdminPortal extends javax.swing.JFrame implements MouseListener {
 //            java.util.logging.Logger.getLogger(DashBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
-        scrlHeader.setText("     " + USER_TYPE);
+        scrlHeader.setText("     " + USER_ID.toUpperCase());
 
         rightPane = (CardLayout) RightPanelMain.getLayout();
         rightPane.show(RightPanelMain, "DashBoardPaneStr");
@@ -89,9 +89,10 @@ public class AdminPortal extends javax.swing.JFrame implements MouseListener {
         ScrDashBoardPane = new javax.swing.JScrollPane();
         DashBoardPane = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        ScrCoursesPane = new javax.swing.JScrollPane();
-        CoursesPane = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        ScrAuthDatabasePane = new javax.swing.JScrollPane();
+        AuthDatabasePane = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         ScrProgRepPane = new javax.swing.JScrollPane();
         CoursesPane1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -195,7 +196,10 @@ public class AdminPortal extends javax.swing.JFrame implements MouseListener {
         RightPanelMain.setBackground(new java.awt.Color(255, 255, 255));
         RightPanelMain.setLayout(new java.awt.CardLayout());
 
+        ScrDashBoardPane.setBackground(new java.awt.Color(255, 255, 255));
         ScrDashBoardPane.setBorder(null);
+        ScrDashBoardPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        ScrDashBoardPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         DashBoardPane.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -226,38 +230,106 @@ public class AdminPortal extends javax.swing.JFrame implements MouseListener {
 
         RightPanelMain.add(ScrDashBoardPane, "DashBoardStr");
 
-        ScrCoursesPane.setBorder(null);
+        ScrAuthDatabasePane.setBackground(new java.awt.Color(255, 255, 255));
+        ScrAuthDatabasePane.setBorder(null);
+        ScrAuthDatabasePane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        ScrAuthDatabasePane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        CoursesPane.setBackground(new java.awt.Color(255, 255, 255));
+        AuthDatabasePane.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setText("Courses");
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        javax.swing.GroupLayout CoursesPaneLayout = new javax.swing.GroupLayout(CoursesPane);
-        CoursesPane.setLayout(CoursesPaneLayout);
-        CoursesPaneLayout.setHorizontalGroup(
-            CoursesPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 763, Short.MAX_VALUE)
-            .addGroup(CoursesPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(CoursesPaneLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+        jTable1.setBackground(new java.awt.Color(255, 255, 255));
+        jTable1.setForeground(new java.awt.Color(102, 102, 102));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "USER ID", "NAME", "ADMISSION NUMBER", "PASSWORD"
+            }
+        ));
+        jTable1.setGridColor(new java.awt.Color(255, 255, 255));
+        jTable1.setSelectionBackground(new java.awt.Color(102, 255, 255));
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout AuthDatabasePaneLayout = new javax.swing.GroupLayout(AuthDatabasePane);
+        AuthDatabasePane.setLayout(AuthDatabasePaneLayout);
+        AuthDatabasePaneLayout.setHorizontalGroup(
+            AuthDatabasePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AuthDatabasePaneLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(49, Short.MAX_VALUE))
         );
-        CoursesPaneLayout.setVerticalGroup(
-            CoursesPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 715, Short.MAX_VALUE)
-            .addGroup(CoursesPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(CoursesPaneLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+        AuthDatabasePaneLayout.setVerticalGroup(
+            AuthDatabasePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AuthDatabasePaneLayout.createSequentialGroup()
+                .addContainerGap(203, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66))
         );
 
-        ScrCoursesPane.setViewportView(CoursesPane);
+        ScrAuthDatabasePane.setViewportView(AuthDatabasePane);
 
-        RightPanelMain.add(ScrCoursesPane, "CoursesStr");
+        RightPanelMain.add(ScrAuthDatabasePane, "CoursesStr");
 
+        ScrProgRepPane.setBackground(new java.awt.Color(255, 255, 255));
         ScrProgRepPane.setBorder(null);
+        ScrProgRepPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        ScrProgRepPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         CoursesPane1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -288,7 +360,10 @@ public class AdminPortal extends javax.swing.JFrame implements MouseListener {
 
         RightPanelMain.add(ScrProgRepPane, "ProgRepStr");
 
+        ScrFacultiesPane.setBackground(new java.awt.Color(255, 255, 255));
         ScrFacultiesPane.setBorder(null);
+        ScrFacultiesPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        ScrFacultiesPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         CoursesPane2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -319,7 +394,10 @@ public class AdminPortal extends javax.swing.JFrame implements MouseListener {
 
         RightPanelMain.add(ScrFacultiesPane, "FacultiesStr");
 
+        ScrTimeTablePane.setBackground(new java.awt.Color(255, 255, 255));
         ScrTimeTablePane.setBorder(null);
+        ScrTimeTablePane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        ScrTimeTablePane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         CoursesPane3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -378,13 +456,13 @@ public class AdminPortal extends javax.swing.JFrame implements MouseListener {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel CoursesPane;
+    private javax.swing.JPanel AuthDatabasePane;
     private javax.swing.JPanel CoursesPane1;
     private javax.swing.JPanel CoursesPane2;
     private javax.swing.JPanel CoursesPane3;
     private javax.swing.JPanel DashBoardPane;
     private javax.swing.JPanel RightPanelMain;
-    private javax.swing.JScrollPane ScrCoursesPane;
+    private javax.swing.JScrollPane ScrAuthDatabasePane;
     private javax.swing.JScrollPane ScrDashBoardPane;
     private javax.swing.JScrollPane ScrFacultiesPane;
     private javax.swing.JScrollPane ScrProgRepPane;
@@ -397,12 +475,13 @@ public class AdminPortal extends javax.swing.JFrame implements MouseListener {
     private javax.swing.JLabel item4;
     private javax.swing.JLabel item5;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel scrlHeader;
     // End of variables declaration//GEN-END:variables
 

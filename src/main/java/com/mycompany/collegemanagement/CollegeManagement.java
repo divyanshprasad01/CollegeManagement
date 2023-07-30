@@ -251,6 +251,9 @@ public class CollegeManagement extends javax.swing.JFrame implements ActionListe
             StudentBtn.setSelected(false);
         }else if(e.getSource() == LoginBtn){
             
+            userId = UserId.getText();
+            password = Password.getText();
+            
             if(AdminBtn.isSelected()){
                 USER_TYPE = AdminBtn.getText().toUpperCase();
                 new AdminPortal(userId, password, USER_TYPE).setVisible(true);
