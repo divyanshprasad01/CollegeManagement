@@ -11,27 +11,47 @@ import java.sql.Statement;
 import java.util.jar.Attributes.Name;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JTable;
 
 public class CollegeDatabase {
     
-    String url = "jdbc:mysql://localhost:3306/testschema";
-    String userName = "root";
-    String password = "root";
+    static String url = "jdbc:mysql://localhost:3306/collegemanagement";
+    static String userName = "root";
+    static String password = "root";
+    static Statement statement;
     
 
-    public CollegeDatabase() {
+    public  CollegeDatabase() {
         try {
             Connection connection = DriverManager.getConnection(url,userName,password);
-            
-            Statement statement = connection.createStatement();
-            ResultSet result = statement.executeQuery("select * from students;");
-           result.next();
-            System.out.println(result);
+            statement = connection.createStatement();    
             
         } catch (Exception e) {
             e.printStackTrace();
         }
         
     } 
+    
+    
+    public static boolean insertData(String name, String admission, String enrol, String username, 
+                                        String password, String dob, String course, String section, String email){
+        
+        String query = "INSERT INTO studentauthprof values(\""+ admission + "\",\"" +name+ "\",\"" + enrol + "\",\"" + dob + "\",\"" + username + "\",\"" + password + "\",\"" + course + "\",\"" + section + "\",\"\",\""+ email +"\");";
+        
+        try{
+            return statement.execute(query);
+            
+        }catch(Exception e){
+            return false;
+        }
+         
+    }
+    
+    
+    
+    
+    public static boolean fetchData(JTable table){
+        return true;
+    }
     
 }

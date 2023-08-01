@@ -2,7 +2,10 @@ com\mycompany\collegemanagement\CollegeManagement.class
 com\mycompany\collegemanagement\CollegeManagement$2.class
 com\mycompany\collegemanagement\StudentPortal.class
 com\mycompany\collegemanagement\CollegeDatabase.class
+com\mycompany\collegemanagement\InsertStudentDataForm$2.class
 com\mycompany\collegemanagement\CollegeManagement$3.class
+com\mycompany\collegemanagement\InsertStudentDataForm.class
 com\mycompany\collegemanagement\AdminPortal.class
 com\mycompany\collegemanagement\CollegeManagement$1.class
 com\mycompany\collegemanagement\FacultyPortal.class
+com\mycompany\collegemanagement\InsertStudentDataForm$1.class
